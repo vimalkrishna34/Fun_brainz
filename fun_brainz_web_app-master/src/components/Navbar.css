@@ -1,0 +1,319 @@
+.navbar {
+    background-color: #34495e;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  
+  .navbar-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar-menu li {
+    position: relative;
+  }
+  
+  .navbar-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Space between icon and text */
+  }
+  
+  .navbar-menu a:hover {
+    color: #e67e22;
+  }
+  
+  .dropdown-menu {
+    list-style: none;
+    background-color: #f39c12;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none;
+    width: 220px; /* Set a fixed width to make it compact */
+    z-index: 1;
+  }
+  
+  .navbar-menu li:hover .dropdown-menu {
+    display: block;
+  }
+  
+  .dropdown-menu li {
+    margin: 0;
+    padding: 10px 15px;
+    border-bottom: 1px solid #e67e22; /* Add a subtle separator */
+    font-size: 0.9rem; /* Adjust font size to make it compact */
+  }
+  
+  .dropdown-menu li:last-child {
+    border-bottom: none; /* Remove border for the last item */
+  }
+  
+  .dropdown-menu a {
+    color: #333;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-menu li:hover {
+    background-color: #e67e22; /* Add a hover effect */
+  }
+  
+  .dropdown-menu a:hover {
+    color: white; /* Change text color on hover */
+  }
+  
+  /* Search bar */
+  .navbar-search {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+  }
+  
+  .search-input {
+    border: none;
+    padding: 5px;
+    outline: none;
+    width: 200px;
+  }
+  
+  .search-icon {
+    color: #34495e;
+  }
+
+  /* Profile Section */
+  .profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    margin-right: -50px; /* This pushes the profile to the right */
+    padding-right: 20px; 
+  }
+  
+  .profile-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #e67e22;
+  }
+  
+  .profile-text {
+    font-size: 0.9rem;
+    color: white;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  /* Popup Overlay for Blur Effect */
+  .popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Blur effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  /* Profile Popup */
+  .profile-popup {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    max-width: 90%;
+    z-index: 1001;
+    position: relative;
+  }
+
+  .profile-popup h2 {
+    margin-top: 0;
+    color: #34495e;
+  }
+
+  .progress-bar {
+    background-color: #ecf0f1;
+    border-radius: 20px;
+    height: 20px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    background-color: #e67e22;
+    height: 100%;
+    width: 75%; /* Example: dynamic width for progress */
+    border-radius: 20px 0 0 20px;
+  }
+
+  .badges-section h3 {
+    color: #34495e;
+  }
+
+  .close-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    color: #e74c3c;
+  }
+
+  /* Responsive styling */
+  @media (max-width: 768px) {
+    .navbar-menu {
+      flex-direction: column;
+      display: none;
+    }
+  
+    .navbar-menu.active {
+      display: flex;
+    }
+  
+    .dropdown-menu {
+      position: static;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  
+    .navbar-search {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    /* Responsive for Profile Section */
+    .profile-avatar {
+      width: 40px;
+      height: 40px;
+    }
+
+    .profile-popup {
+      width: 90%;
+      padding: 20px;
+    }
+
+    .profile-popup h2 {
+      font-size: 1.2rem;
+    }
+
+    .progress-fill {
+      width: 65%; /* Adjust progress width based on responsiveness */
+    }
+
+    .search-input {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Mobile responsive adjustments */
+    .navbar-menu {
+      gap: 10px;
+    }
+
+    .navbar-container {
+      flex-direction: column;
+    }
+
+    .profile-avatar {
+      width: 35px;
+      height: 35px;
+    }
+
+    .profile-popup {
+      width: 100%;
+    }
+
+    .profile-popup h2 {
+      font-size: 1rem;
+    }
+
+    .progress-fill {
+      width: 55%; /* Further adjustments for small screens */
+    }
+  }
+
+
+
+  
+
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between the buttons */
+    margin-left: 20px; /* Adjust to push it from the right */
+}
+
+.login-btn, .signup-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn {
+    background-color: #3498db;
+    color: white;
+    
+}
+
+.signup-btn {
+    background-color: #e67e22;
+    color: white;
+    margin-right:-220px;
+}
+
+/* Hover effects */
+.login-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+.signup-btn:hover {
+    background-color: #d35400;
+    transform: scale(1.05);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .auth-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .login-btn, .signup-btn {
+        width: 100%; /* Make them full-width on smaller screens */
+        padding: 10px;
+    }
+}

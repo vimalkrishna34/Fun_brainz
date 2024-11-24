@@ -1,0 +1,120 @@
+/* src/components/LandingPage.css */
+
+.landing-page {
+    font-family: 'Comic Sans MS', sans-serif;
+    color: #333;
+    text-align: center;
+    background-color: #f0f8ff;
+}
+
+.hero {
+    background-color: #ffeb3b;
+    padding: 50px;
+    border-bottom: 3px solid #f39c12;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero-title {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.brand-name {
+    color: #e67e22;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
+
+.hero-image {
+    margin-top: 20px;
+    width: 300px;
+}
+
+.cta-button {
+    background-color: #e67e22;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.features {
+    padding: 50px;
+    background-color: #f39c12;
+    color: white;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.feature-card {
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px); /* Lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.feature-icon {
+    font-size: 3rem;
+    color: #f39c12;
+}
+
+.quote-section {
+    background-color: #2ecc71;
+    color: white;
+    padding: 30px;
+    font-size: 1.5rem;
+    text-align: center; /* Center align the quote text */
+}
+
+.footer {
+    background-color: #34495e;
+    color: white;
+    padding: 20px;
+    font-size: 1rem;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 15px; /* Increased margin for better spacing */
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 40px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icons img:hover {
+    transform: scale(1.2); /* Slightly enlarge on hover */
+}

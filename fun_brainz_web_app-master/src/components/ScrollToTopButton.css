@@ -1,0 +1,25 @@
+/* src/components/ScrollToTopButton.css */
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px; /* Position from the bottom */
+    right: 20px; /* Position from the right */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent; /* Transparent background */
+    cursor: pointer;
+    z-index: 1000;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease;
+  }
+  
+  .scroll-to-top.visible {
+    opacity: 1; /* Visible when scrolling above the threshold */
+  }
+  
+  .scroll-to-top img {
+    width: 100px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
